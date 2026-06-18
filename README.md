@@ -8,8 +8,8 @@
 
 ## 핵심 역량
 
-- **웹 프론트엔드** — React 18, TypeScript, Vite, styled-components, React Router, recharts, axios
-- **모바일 (Flutter)** — Flutter, Dart, BLoC/Cubit, go_router, dio, GetIt·Injectable, Firebase
+- **웹 프론트엔드 (주력)** — React 18, TypeScript, Next.js, styled-components, React Router, axios
+- **모바일 (Flutter · React Native)** — 장기간 단독 리드하며 경험적으로 해결해 온 영역. Flutter/Dart, React Native, BLoC·Cubit, go_router, Firebase
 - **연동 · 배포** — OAuth 2.0/JWT, 광고 SDK 연동, S3·CloudFront, App Store·Play, 멀티 환경 빌드
 
 ## 프로젝트 (역할·기술 중심 정리)
@@ -17,8 +17,8 @@
 실제 업무는 회사 비공개 저장소로 진행되어, 도메인과 역할 중심으로 일반화했습니다. 두 개의 프로덕트 라인에 걸쳐 **총 41개 저장소에 기여**했습니다.
 
 ### 리워드 광고 플랫폼 (Product Line A)
-- **광고 운영 관리자 대시보드** — 퍼블리셔·매출·정산·실시간 지표 분석 대시보드 (React/TS/Vite, recharts, Google OAuth, S3·CloudFront)
 - **마이비 애드체인 (MyB AdChain)** — 콘텐츠(퀴즈) 중심 보상형 애드네트워크. 제휴 매체별 맞춤 허브·캠페인 이벤트 웹, Daily·캐러셀 UI 개발 (DAU당 일 참여 10.6회 / 광고매출 240원 / 네이티브 전환 30~60%). 서비스 매체: K뱅크·엠넷플러스·데일리샷·똑닥·트레져러·해피스크린·포토위젯·채티·레진코믹스
+- **마이비 애드체인 운영 대시보드 (Fully AI 개발)** — 매체·매출·정산·실시간 지표 운영 대시보드. 기획부터 구현·배포까지 전 과정을 AI로 개발. 13개+ 분석 화면, Google OAuth·JWT, S3·CloudFront (React/TS)
 
 ### 마이비 (MyB) — 리워드 슈퍼앱 · 대표 서비스
 > 📲 **100만+ 다운로드 · 4.8★ (리뷰 2.1만+)** · [Google Play](https://play.google.com/store/apps/details?id=im.myb.android&hl=ko) · [App Store](https://apps.apple.com/kr/app/id6476365625)
