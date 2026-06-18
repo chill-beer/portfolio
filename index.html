@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jun · Frontend Engineer — Portfolio</title>
+<meta name="description" content="웹과 모바일을 아우르는 프론트엔드 엔지니어 Jun의 포트폴리오. 리워드 광고 플랫폼과 리워드 슈퍼앱 서비스 개발." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<style>
+  :root{
+    --bg:#0c0d10;
+    --bg-soft:#131419;
+    --ink:#f3f1ea;
+    --muted:#9a9a93;
+    --line:#26272e;
+    --accent:#c8f364;
+    --accent-dim:#8fae46;
+    --serif:"Fraunces",serif;
+    --mono:"JetBrains Mono",monospace;
+    --sans:"Pretendard","Pretendard Variable",-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(900px 500px at 78% -8%, rgba(200,243,100,.10), transparent 60%),
+      radial-gradient(700px 600px at -5% 110%, rgba(120,140,255,.06), transparent 55%);
+  }
+  body::after{
+    content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.04;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 28px}
+  a{color:inherit;text-decoration:none}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+    background:rgba(12,13,16,.72);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-family:var(--mono);font-weight:700;letter-spacing:.04em;font-size:14px}
+  .brand span{color:var(--accent)}
+  .navlinks{display:flex;gap:26px;font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+  .navlinks a{transition:color .2s}.navlinks a:hover{color:var(--accent)}
+  @media(max-width:620px){.navlinks{display:none}}
+
+  /* hero */
+  header{padding:120px 0 86px}
+  .tag{font-family:var(--mono);font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:26px}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(52px,9vw,116px);line-height:.96;letter-spacing:-.02em}
+  h1 em{font-style:italic;color:var(--accent);font-weight:500}
+  .lede{max-width:620px;margin-top:30px;font-size:clamp(17px,2.1vw,20px);color:#d8d6cd}
+  .lede b{color:var(--ink);font-weight:600}
+  .cta{margin-top:40px;display:flex;flex-wrap:wrap;gap:14px;font-family:var(--mono);font-size:13px}
+  .cta a{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border:1px solid var(--line);border-radius:999px;transition:.22s}
+  .cta a:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+  .cta a.solid{background:var(--accent);color:#0c0d10;border-color:var(--accent);font-weight:700}
+  .cta a.solid:hover{background:#d7ff7e;color:#0c0d10}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+    border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:8px}
+  .stats div{background:var(--bg-soft);padding:26px 22px}
+  .stats .num{font-family:var(--serif);font-size:clamp(30px,4.6vw,46px);line-height:1;color:var(--accent)}
+  .stats .lbl{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-top:10px;letter-spacing:.03em}
+  @media(max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+  section{padding:84px 0}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-dim);margin-bottom:14px}
+  .sec-title{font-family:var(--serif);font-size:clamp(30px,4.6vw,46px);font-weight:600;letter-spacing:-.01em;line-height:1.05}
+  .sec-sub{color:var(--muted);max-width:640px;margin-top:14px;font-size:15.5px}
+
+  /* skills */
+  .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
+  @media(max-width:820px){.skills{grid-template-columns:1fr}}
+  .skill{border:1px solid var(--line);border-radius:16px;padding:26px;background:linear-gradient(180deg,var(--bg-soft),rgba(19,20,25,.4));transition:.25s}
+  .skill:hover{border-color:#3a3c45;transform:translateY(-3px)}
+  .skill h3{font-size:17px;margin-bottom:6px;display:flex;align-items:center;gap:10px}
+  .skill h3 i{width:8px;height:8px;border-radius:2px;background:var(--accent);display:inline-block}
+  .skill p{color:var(--muted);font-size:13.5px;margin-bottom:16px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips span{font-family:var(--mono);font-size:11.5px;color:#cfcdc4;border:1px solid var(--line);border-radius:7px;padding:5px 9px;background:rgba(0,0,0,.2)}
+
+  /* projects */
+  .proj{margin-top:50px;display:flex;flex-direction:column;gap:22px}
+  .card{border:1px solid var(--line);border-radius:20px;padding:34px;background:var(--bg-soft);position:relative;overflow:hidden;transition:.28s}
+  .card:hover{border-color:#41434d}
+  .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);opacity:.55}
+  .card .row{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
+  .card .kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-dim)}
+  .card h3{font-family:var(--serif);font-size:clamp(23px,3.2vw,30px);font-weight:600;margin:8px 0 4px}
+  .card .scope{font-family:var(--mono);font-size:11.5px;color:var(--muted);white-space:nowrap;border:1px solid var(--line);padding:6px 11px;border-radius:999px}
+  .card p{color:#cdcbc2;font-size:15px;margin:14px 0 20px;max-width:760px}
+  .card ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px;margin-bottom:22px}
+  @media(max-width:680px){.card ul{grid-template-columns:1fr}}
+  .card li{position:relative;padding-left:20px;font-size:14px;color:#bdbbb2}
+  .card li::before{content:"→";position:absolute;left:0;color:var(--accent);font-family:var(--mono)}
+  .stack{display:flex;flex-wrap:wrap;gap:7px}
+  .stack span{font-family:var(--mono);font-size:11px;color:#0c0d10;background:var(--accent);border-radius:6px;padding:4px 9px;font-weight:500;opacity:.92}
+  .stack span.ghost{background:transparent;color:#cfcdc4;border:1px solid var(--line)}
+
+  /* approach */
+  .appro{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:46px}
+  @media(max-width:720px){.appro{grid-template-columns:1fr}}
+  .appro div{border-top:1px solid var(--line);padding-top:18px}
+  .appro h4{font-family:var(--mono);font-size:13px;color:var(--accent);margin-bottom:8px;letter-spacing:.03em}
+  .appro p{color:var(--muted);font-size:14.5px}
+
+  /* contact */
+  .contact{border:1px solid var(--line);border-radius:24px;padding:clamp(36px,6vw,68px);background:linear-gradient(135deg,var(--bg-soft),rgba(200,243,100,.04));text-align:center;margin-bottom:30px}
+  .contact h2{font-family:var(--serif);font-size:clamp(30px,5vw,54px);font-weight:600;letter-spacing:-.01em}
+  .contact p{color:var(--muted);margin:16px auto 30px;max-width:460px}
+  .contact .cta{justify-content:center}
+
+  footer{border-top:1px solid var(--line);padding:30px 0 56px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+
+  .editnote{font-family:var(--mono);font-size:11px;color:var(--accent-dim)}
+
+  /* reveal */
+  .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <div class="brand">chill<span>-</span>beer<span>.</span></div>
+    <div class="navlinks">
+      <a href="#skills">역량</a>
+      <a href="#work">프로젝트</a>
+      <a href="#approach">작업 방식</a>
+      <a href="#contact">연락</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="tag rv">Frontend Engineer · Web &amp; Mobile</div>
+    <h1 class="rv">웹과 모바일을<br>오가며 만드는<br><em>프론트엔드.</em></h1>
+    <p class="lede rv">안녕하세요, <b>Jun</b>입니다. 리워드 광고 플랫폼과 리워드 슈퍼앱 서비스에서
+      <b>React·TypeScript 웹</b>과 <b>Flutter 모바일 앱</b>을 만들어 왔습니다.
+      대규모 멀티 레포 환경에서 기능 단위로 설계하고, 데이터 시각화와 안정적인 배포까지 책임집니다.</p>
+    <div class="cta rv">
+      <a class="solid" href="#work">프로젝트 보기</a>
+      <a href="https://github.com/chill-beer" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="mailto:juno87@icloud.com">이메일</a>
+    </div>
+  </div>
+</header>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="stats rv">
+      <div><div class="num">41</div><div class="lbl">기여한 레포지토리</div></div>
+      <div><div class="num">2</div><div class="lbl">핵심 프로덕트 라인</div></div>
+      <div><div class="num">Web+App</div><div class="lbl">웹 · 모바일 풀스택 프론트</div></div>
+      <div><div class="num">TS · Dart</div><div class="lbl">주력 언어</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="eyebrow rv">Core Skills</div>
+    <h2 class="sec-title rv">핵심 역량</h2>
+    <p class="sec-sub rv">제품 기획부터 구현·배포까지, 프론트엔드 전 영역을 다룹니다.</p>
+    <div class="skills">
+      <div class="skill rv">
+        <h3><i></i>웹 프론트엔드</h3>
+        <p>SPA 설계, 컴포넌트 아키텍처, 데이터 시각화 대시보드 구축.</p>
+        <div class="chips">
+          <span>React 18</span><span>TypeScript</span><span>Vite</span>
+          <span>styled-components</span><span>React Router</span><span>recharts</span><span>axios</span>
+        </div>
+      </div>
+      <div class="skill rv">
+        <h3><i></i>모바일 (Flutter)</h3>
+        <p>Clean Architecture 기반 앱 설계, 레거시 → 신규 구조 리팩토링.</p>
+        <div class="chips">
+          <span>Flutter</span><span>Dart</span><span>BLoC / Cubit</span>
+          <span>go_router</span><span>dio</span><span>GetIt · Injectable</span><span>Firebase</span>
+        </div>
+      </div>
+      <div class="skill rv">
+        <h3><i></i>연동 · 배포</h3>
+        <p>인증/토큰 처리, 외부 SDK 연동, 자동화된 빌드·배포 파이프라인.</p>
+        <div class="chips">
+          <span>OAuth 2.0 · JWT</span><span>S3 · CloudFront</span>
+          <span>App Store · Play</span><span>멀티 환경(dev/qa/prod)</span><span>광고 SDK 연동</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="eyebrow rv">Selected Work</div>
+    <h2 class="sec-title rv">프로젝트</h2>
+    <p class="sec-sub rv">실제 업무는 회사 비공개 저장소로 진행되어, 역할과 기술 중심으로 정리했습니다.
+      두 개의 프로덕트 라인에 걸쳐 총 41개 저장소에 기여했습니다.</p>
+
+    <div class="proj">
+      <div class="card rv">
+        <div class="row">
+          <div>
+            <div class="kicker">리워드 광고 플랫폼 · Product Line A</div>
+            <h3>광고 운영 관리자 대시보드</h3>
+          </div>
+          <div class="scope">웹 · 데이터 시각화</div>
+        </div>
+        <p>퍼블리셔·매출·정산·실시간 지표를 한 곳에서 보는 운영 대시보드를 설계·구현했습니다.
+          실시간 모니터링, 리텐션/세그먼트 분석, 매출 유형별 차트, 정산 비교, CSV 내보내기 등
+          데이터 중심 화면을 다수 구축했습니다.</p>
+        <ul>
+          <li>13개+ 분석 페이지 및 재사용 컴포넌트 체계 설계</li>
+          <li>recharts 기반 매출·리텐션·DAU 시각화</li>
+          <li>Google OAuth + JWT 자동 갱신 인증 흐름</li>
+          <li>다크/라이트 테마, 디자인 토큰 표준화</li>
+          <li>S3 + CloudFront 빌드·배포 자동화</li>
+          <li>ErrorBoundary 2단계 에러 처리</li>
+        </ul>
+        <div class="stack">
+          <span>React 18</span><span>TypeScript</span><span>Vite</span>
+          <span class="ghost">styled-components</span><span class="ghost">recharts</span><span class="ghost">axios</span>
+        </div>
+      </div>
+
+      <div class="card rv">
+        <div class="row">
+          <div>
+            <div class="kicker">리워드 광고 플랫폼 · Product Line A</div>
+            <h3>퍼블리셔 · 허브 · 이벤트 웹</h3>
+          </div>
+          <div class="scope">웹 · 파트너 연동</div>
+        </div>
+        <p>광고주·파트너별 허브 페이지와 캠페인 이벤트 웹, 퍼블리셔용 화면 등
+          다수의 연동 웹 서비스를 개발했습니다. 공개 SDK 샘플 앱을 통해 연동 가이드도 제공합니다.</p>
+        <ul>
+          <li>파트너별 맞춤 허브/랜딩 웹 다수 구축</li>
+          <li>퀴즈·미션·네이티브 등 캠페인 이벤트 페이지</li>
+          <li>리워드 광고 SDK 연동 샘플(React) 공개 운영</li>
+          <li>공통 컴포넌트·스타일 재사용으로 개발 효율화</li>
+        </ul>
+        <div class="stack">
+          <span>TypeScript</span><span>React</span>
+          <span class="ghost">광고 SDK 연동</span><span class="ghost">멀티 레포</span>
+        </div>
+      </div>
+
+      <div class="card rv">
+        <div class="row">
+          <div>
+            <div class="kicker">리워드 슈퍼앱 · Product Line B</div>
+            <h3>리워드 슈퍼앱 (Flutter)</h3>
+          </div>
+          <div class="scope">모바일 · iOS / Android</div>
+        </div>
+        <p>적립·혜택 중심 슈퍼앱의 모바일 클라이언트를 개발했습니다.
+          레거시 모듈을 Clean Architecture 기반 신규 구조로 점진적으로 리팩토링하고,
+          멀티 플레이버 빌드와 스토어 배포를 운영했습니다.</p>
+        <ul>
+          <li>Clean Architecture (data/domain/presentation) 도입</li>
+          <li>상태관리 BLoC → Cubit 전환 및 표준화</li>
+          <li>GetIt · Injectable 의존성 주입, go_router 라우팅</li>
+          <li>Firebase(Analytics·Messaging·Crashlytics), 카카오 SDK 연동</li>
+          <li>dev/qa/staging/prod 멀티 플레이버 빌드</li>
+          <li>App Store · Play Store 릴리스</li>
+        </ul>
+        <div class="stack">
+          <span>Flutter</span><span>Dart</span><span>BLoC · Cubit</span>
+          <span class="ghost">go_router</span><span class="ghost">dio</span><span class="ghost">Firebase</span>
+        </div>
+      </div>
+
+      <div class="card rv">
+        <div class="row">
+          <div>
+            <div class="kicker">리워드 슈퍼앱 · Product Line B</div>
+            <h3>인앱 웹서비스 모음</h3>
+          </div>
+          <div class="scope">웹 · 다수 서비스</div>
+        </div>
+        <p>슈퍼앱 안에서 동작하는 수십 개의 웹뷰 서비스를 개발·유지보수했습니다.
+          쇼핑 적립, 가입·계정, 멤버십, 퀴즈·미션, 게임·이벤트, 배너·프로모션 등
+          독립 배포되는 기능 단위 웹을 각각 오너십을 갖고 담당했습니다.</p>
+        <ul>
+          <li>쇼핑 적립 · 오퍼월 · 리워드 웹</li>
+          <li>가입 · 계정 복구 · 멤버십 웹</li>
+          <li>퀴즈 · 미션 · 출석 · 게임 이벤트 웹</li>
+          <li>배너 · 프로모션 · 랭킹 · 공지 웹</li>
+        </ul>
+        <div class="stack">
+          <span>TypeScript</span><span>React</span>
+          <span class="ghost">기능 단위 멀티 레포</span><span class="ghost">독립 배포</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="wrap">
+    <div class="eyebrow rv">How I Work</div>
+    <h2 class="sec-title rv">작업 방식</h2>
+    <div class="appro">
+      <div class="rv"><h4>기능 단위 오너십</h4><p>수십 개의 독립 저장소를 각각 책임지고 설계·배포까지 끌고 갑니다. 작은 단위로 나누되 일관성을 유지합니다.</p></div>
+      <div class="rv"><h4>점진적 리팩토링</h4><p>레거시를 한 번에 갈아엎기보다, 신규 기능부터 Clean Architecture로 옮기며 안정적으로 전환합니다.</p></div>
+      <div class="rv"><h4>디자인 시스템 사고</h4><p>색·타이포·간격을 상수화하고 공통 컴포넌트로 묶어, 여러 제품 사이의 UI 일관성을 확보합니다.</p></div>
+      <div class="rv"><h4>데이터를 읽기 쉽게</h4><p>매출·리텐션 같은 복잡한 지표를 차트와 카드로 정리해, 의사결정에 쓰이는 화면을 만듭니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact rv">
+      <h2>함께 일해요.</h2>
+      <p>새로운 기회나 협업 제안을 환영합니다. 편하게 연락 주세요.</p>
+      <div class="cta">
+        <a class="solid" href="mailto:juno87@icloud.com">juno87@icloud.com</a>
+        <a href="https://github.com/chill-beer" target="_blank" rel="noopener">github.com/chill-beer ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Jun · Frontend Engineer</div>
+    <div class="editnote">// 이름·소개·연락처는 자유롭게 수정하세요</div>
+  </div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver((es)=>{
+    es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*70);io.unobserve(e.target)}})
+  },{threshold:.12});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
