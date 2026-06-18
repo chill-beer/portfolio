@@ -18,7 +18,7 @@
 
 ### 리워드 광고 플랫폼 (Product Line A)
 - **광고 운영 관리자 대시보드** — 퍼블리셔·매출·정산·실시간 지표 분석 대시보드 (React/TS/Vite, recharts, Google OAuth, S3·CloudFront)
-- **퍼블리셔·허브·이벤트 웹** — 파트너별 허브/랜딩, 캠페인 이벤트 페이지, 광고 SDK 연동 샘플(공개)
+- **마이비 애드체인 (MyB AdChain)** — 콘텐츠(퀴즈) 중심 보상형 애드네트워크. 제휴 매체별 맞춤 허브·캠페인 이벤트 웹, Daily·캐러셀 UI 개발 (DAU당 일 참여 10.6회 / 광고매출 240원 / 네이티브 전환 30~60%). 서비스 매체: K뱅크·엠넷플러스·데일리샷·똑닥·트레져러·해피스크린·포토위젯·채티·레진코믹스
 
 ### 마이비 (MyB) — 리워드 슈퍼앱 · 대표 서비스
 > 📲 **100만+ 다운로드 · 4.8★ (리뷰 2.1만+)** · [Google Play](https://play.google.com/store/apps/details?id=im.myb.android&hl=ko) · [App Store](https://apps.apple.com/kr/app/id6476365625)
@@ -33,7 +33,7 @@
 
 - **Firma Station — 블록체인 월렛 & 개발자 툴** ([Google Play](https://play.google.com/store/apps/details?id=com.firma_station_mobile&hl=ko) · [App Store](https://apps.apple.com/kr/app/firma-station/id1611660902)) — Cosmos 계열 퍼블릭 메인넷의 월렛 스테이션(스테이킹·거버넌스·생체인증), 모바일 지갑, 컨트랙트 검증·제작(CosmWasm) 툴, IBC 릴레이어 익스플로러, 파우셋, NFT 갤러리 등 10여 개 프론트엔드 (React/TS, Apollo GraphQL, Redux Toolkit, Ledger 연동, Chain SDK)
 - **NFT 마켓플레이스** — Immutable X 기반 마켓플레이스 웹·어드민·랜딩, MetaMask 연동, 민팅/거래 플로우 (React/TS, Tailwind, S3·CloudFront)
-- **온체인 전자문서 서비스** — 블록체인 기록 기반 전자문서/인증 웹, PDF 처리·암호화·소셜 로그인 (React/TS, pdf-lib·pdf.js, crypto-js)
+- **도뉴 (DONUE) — 전자계약 서비스** ([donue.co.kr](https://donue.co.kr/)) — 전자서명·API·온프레미스 전자계약 SaaS의 웹 서비스. 계약 작성·서명·관리, 채팅 협의, 폴더·팀 관리, 대량 전송, 블록체인 기반 문서 위·변조 검증 (React/TS, pdf-lib·pdf.js, crypto-js)
 
 ## 작업 방식
 - 수십 개 독립 저장소를 기능 단위로 오너십을 갖고 설계·배포
