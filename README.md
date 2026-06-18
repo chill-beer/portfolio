@@ -20,9 +20,20 @@
 - **광고 운영 관리자 대시보드** — 퍼블리셔·매출·정산·실시간 지표 분석 대시보드 (React/TS/Vite, recharts, Google OAuth, S3·CloudFront)
 - **퍼블리셔·허브·이벤트 웹** — 파트너별 허브/랜딩, 캠페인 이벤트 페이지, 광고 SDK 연동 샘플(공개)
 
-### 리워드 슈퍼앱 (Product Line B)
-- **리워드 슈퍼앱 (Flutter)** — Clean Architecture 기반 모바일 앱, BLoC→Cubit 전환, 멀티 플레이버 빌드/스토어 배포
-- **인앱 웹서비스 모음** — 쇼핑 적립·가입/계정·멤버십·퀴즈/미션·게임/이벤트·배너/프로모션 등 다수의 기능 단위 웹
+### 마이비 (MyB) — 리워드 슈퍼앱 · 대표 서비스
+> 📲 **100만+ 다운로드 · 4.8★ (리뷰 2.1만+)** · [Google Play](https://play.google.com/store/apps/details?id=im.myb.android&hl=ko) · [App Store](https://apps.apple.com/kr/app/id6476365625)
+
+퀴즈·만보기·게임·쇼핑·설문·포인트 적금·현금인출을 담은 올인원 앱테크.
+- **Flutter 모바일 앱** — Clean Architecture, BLoC→Cubit 전환, 멀티 플레이버 빌드/스토어 배포
+- **인앱 웹서비스 다수** — 쇼핑 적립·가입/멤버십·퀴즈/미션·게임/이벤트·배너/프로모션 등 기능 단위 React/TS 웹
+
+## 이전 경력 (블록체인 · Web3)
+
+현재 광고·리워드 프로덕트 이전에는 블록체인/Web3 도메인의 프론트엔드를 담당했습니다. (회사·제품명은 일반화)
+
+- **Firma Station — 블록체인 월렛 & 개발자 툴** ([Google Play](https://play.google.com/store/apps/details?id=com.firma_station_mobile&hl=ko) · [App Store](https://apps.apple.com/kr/app/firma-station/id1611660902)) — Cosmos 계열 퍼블릭 메인넷의 월렛 스테이션(스테이킹·거버넌스·생체인증), 모바일 지갑, 컨트랙트 검증·제작(CosmWasm) 툴, IBC 릴레이어 익스플로러, 파우셋, NFT 갤러리 등 10여 개 프론트엔드 (React/TS, Apollo GraphQL, Redux Toolkit, Ledger 연동, Chain SDK)
+- **NFT 마켓플레이스** — Immutable X 기반 마켓플레이스 웹·어드민·랜딩, MetaMask 연동, 민팅/거래 플로우 (React/TS, Tailwind, S3·CloudFront)
+- **온체인 전자문서 서비스** — 블록체인 기록 기반 전자문서/인증 웹, PDF 처리·암호화·소셜 로그인 (React/TS, pdf-lib·pdf.js, crypto-js)
 
 ## 작업 방식
 - 수십 개 독립 저장소를 기능 단위로 오너십을 갖고 설계·배포
