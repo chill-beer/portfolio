@@ -1,6 +1,6 @@
 # Jun · Frontend Engineer
 
-웹과 모바일을 아우르는 프론트엔드 엔지니어입니다. 리워드 광고 플랫폼과 리워드 슈퍼앱 서비스에서 **React·TypeScript 웹**과 **Flutter 모바일 앱**을 만들어 왔습니다.
+8년차 프론트엔드 엔지니어입니다. 100만+ 다운로드 리워드 슈퍼앱 **마이비**의 Flutter 앱과 인앱 웹, 광고 플랫폼 **마이비 애드체인**의 **React·TypeScript** 웹을 만들어 왔습니다. 이전에는 블록체인·Web3 도메인에서 지갑·dApp 프론트엔드를 담당했습니다.
 
 🔗 **포트폴리오 사이트**: https://chill-beer.github.io/portfolio/
 
