@@ -1,4 +1,4 @@
-# Jun · Frontend Engineer
+# 정준혁 (Jun) · Frontend Engineer
 
 8년차 프론트엔드 엔지니어입니다. 100만+ 다운로드 리워드 슈퍼앱 **마이비**의 Flutter 앱과 인앱 웹, 광고 플랫폼 **마이비 애드체인**의 **React·TypeScript** 웹을 만들어 왔습니다. 이전에는 블록체인·Web3 도메인에서 지갑·dApp 프론트엔드를 담당했습니다.
 
@@ -27,13 +27,13 @@
 - **Flutter 모바일 앱** — Clean Architecture, BLoC→Cubit 전환, 멀티 플레이버 빌드/스토어 배포
 - **인앱 웹서비스 다수** — 쇼핑 적립·가입/멤버십·퀴즈/미션·게임/이벤트·배너/프로모션 등 기능 단위 React/TS 웹
 
-## 이전 경력 (블록체인 · Web3)
+## 이전 경력 — FIG (피르마이노베이션그룹) · 2021.08 ~ 2024.08
 
-현재 광고·리워드 프로덕트 이전에는 블록체인/Web3 도메인의 프론트엔드를 담당했습니다. (회사·제품명은 일반화)
+블록체인 메인넷과 dApp, 서비스 웹의 프론트엔드를 담당했습니다.
 
-- **Firma Station — 블록체인 월렛 & 개발자 툴** ([Google Play](https://play.google.com/store/apps/details?id=com.firma_station_mobile&hl=ko) · [App Store](https://apps.apple.com/kr/app/firma-station/id1611660902)) — Cosmos 계열 퍼블릭 메인넷의 월렛 스테이션(스테이킹·거버넌스·생체인증), 모바일 지갑, 컨트랙트 검증·제작(CosmWasm) 툴, IBC 릴레이어 익스플로러, 파우셋, NFT 갤러리 등 10여 개 프론트엔드 (React/TS, Apollo GraphQL, Redux Toolkit, Ledger 연동, Chain SDK)
-- **NFT 마켓플레이스** — Immutable X 기반 마켓플레이스 웹·어드민·랜딩, MetaMask 연동, 민팅/거래 플로우 (React/TS, Tailwind, S3·CloudFront)
-- **도뉴 (DONUE) — 전자계약 서비스** ([donue.co.kr](https://donue.co.kr/)) — 전자서명·API·온프레미스 전자계약 SaaS의 웹 서비스. 계약 작성·서명·관리, 채팅 협의, 폴더·팀 관리, 대량 전송, 블록체인 기반 문서 위·변조 검증 (React/TS, pdf-lib·pdf.js, crypto-js)
+- **피르마체인 · Firma Station** ([Google Play](https://play.google.com/store/apps/details?id=com.firma_station_mobile&hl=ko) · [App Store](https://apps.apple.com/kr/app/firma-station/id1611660902)) — 퍼블릭 메인넷 모바일 지갑 앱(스테이킹·거버넌스), 테스트넷 Faucet, VestingAccount용 Genesis Convert 도구, IBC 데이터 시각화·분석 웹, BWB NFT 갤러리, 랜딩 (React/TS, React Native, Apollo GraphQL, Ledger, Chain SDK)
+- **BSU (Baby Shark Universe)** — 이더리움 기반 NFT·토큰 서비스 허브. NFT·토큰 에어드랍, ERC20 토크노믹스 관리 웹, 스마트 컨트랙트 배포·관리·테스트 툴 (React/TS, Immutable X·이더리움, MetaMask, ERC20)
+- **도뉴 (DONUE)** ([donue.co.kr](https://donue.co.kr/)) — 전자계약 SaaS 랜딩 및 피르마체인 기반 계약서 위·변조 검증 도구 (React/TS, Gatsby, 피르마체인 검증, crypto-js)
 
 ## 작업 방식
 - 수십 개 독립 저장소를 기능 단위로 오너십을 갖고 설계·배포
