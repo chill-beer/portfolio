@@ -175,9 +175,10 @@
     .cta a.solid,.cta a{flex:1 1 auto;justify-content:center}
     section{padding:54px 0}
     .sec-title{font-size:clamp(26px,7vw,34px)}
-    .stats{gap:10px}
-    .stats div{padding:18px 16px}
-    .stats .num{font-size:clamp(22px,7vw,30px)}
+    .stats{gap:10px;grid-template-columns:repeat(2,minmax(0,1fr))}
+    .stats div{padding:18px 16px;min-width:0}
+    .stats .num{font-size:clamp(20px,6vw,28px);word-break:keep-all}
+    .stats .lbl{word-break:keep-all}
     .skills{gap:12px;margin-top:32px}
     .skill{padding:22px 20px}
     .proj{gap:14px;margin-top:34px}
