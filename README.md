@@ -36,6 +36,11 @@
 - **BSU (Baby Shark Universe)** — 이더리움 기반 NFT·토큰 서비스 허브. NFT·토큰 에어드랍, ERC20 토크노믹스 관리 웹, 스마트 컨트랙트 배포·관리·테스트 툴 (React/TS, Immutable X·이더리움, MetaMask, ERC20)
 - **도뉴 (DONUE)** ([donue.co.kr](https://donue.co.kr/)) — 전자계약 SaaS 랜딩 및 피르마체인 기반 계약서 위·변조 검증 도구 (React/TS, Gatsby, 피르마체인 검증, crypto-js)
 
+## 성과 (Impact)
+
+- **대규모 트래픽 대응 (마이비 애드체인)** — 오퍼월 첫 진입 통신량 약 80%↓ (29→6건). React Query 캐싱·중복 제거 + IntersectionObserver lazy-load + 스켈레톤을 kill-switch 기반으로 점진 적용. 서버 최적화 병행으로 처리 한계 2~3천 → 5천 RPS(DB 피크 50%↓)로 확대, 푸시·이벤트 스파이크 대응 여력 확보. 부하 테스트용 유저 시나리오·엔드포인트 가중치 매트릭스 직접 작성.
+- **앱 안정성 (마이비)** — Android 사용자 인지 비정상 종료율 약 74%↓ (2.40% → 0.62%, 28일 이동평균), 동종 앱 중앙값 수준 안착.
+
 ## 작업 방식
 - 수십 개 독립 저장소를 기능 단위로 오너십을 갖고 설계·배포
 - 레거시 → Clean Architecture 점진적 리팩토링

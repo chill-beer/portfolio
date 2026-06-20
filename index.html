@@ -214,6 +214,7 @@
     <div class="navlinks">
       <a href="#skills">역량</a>
       <a href="#work">프로젝트</a>
+      <a href="#impact">성과</a>
       <a href="#career">경력</a>
       <a href="#approach">작업 방식</a>
       <a href="#contact">연락</a>
@@ -345,6 +346,8 @@
           <div class="metric"><div class="v"><b>10.6회</b></div><div class="k">DAU당 일 참여 (업계 1~3회)</div></div>
           <div class="metric"><div class="v">240원</div><div class="k">DAU당 일 광고매출 (경쟁사 70~100원)</div></div>
           <div class="metric"><div class="v">30~60%</div><div class="k">네이티브 광고 전환율</div></div>
+          <div class="metric"><div class="v"><b>80%↓</b></div><div class="k">오퍼월 첫 진입 통신량</div></div>
+          <div class="metric"><div class="v"><b>~2배</b></div><div class="k">처리량 3,000→5,000 RPS</div></div>
         </div>
         <p style="margin:0 0 10px;color:var(--muted);font-size:13px;font-weight:600">서비스 매체</p>
         <div class="chips" style="margin-bottom:20px">
@@ -379,6 +382,60 @@
           <span class="ghost">styled-components</span><span class="ghost">데이터 시각화</span><span class="ghost">AI 개발</span>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="impact">
+  <div class="wrap">
+    <div class="eyebrow rv">Impact</div>
+    <h2 class="sec-title rv">성과</h2>
+    <p class="sec-sub rv">비즈니스·서비스 관점에서 측정된 주요 성과입니다.</p>
+    <div class="proj">
+
+      <!-- 대규모 트래픽 대응 -->
+      <div class="card rv">
+        <div class="row">
+          <div>
+            <div class="kicker">마이비 애드체인 · 대규모 트래픽 대응</div>
+            <h3>오퍼월 통신 구조 개선</h3>
+          </div>
+          <div class="scope">성능 · 가용성</div>
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="v"><b>80%↓</b></div><div class="k">첫 진입 통신량 (29→6건)</div></div>
+          <div class="metric"><div class="v"><b>~2배</b></div><div class="k">처리량 3,000→5,000 RPS</div></div>
+          <div class="metric"><div class="v">50%↓</div><div class="k">부하 시 DB 피크</div></div>
+        </div>
+        <p><b style="color:var(--fg)">문제</b> — 캐싱 없는 useEffect 호출로 중복·무분별 통신, 첫 진입 시 화면 밖 섹션까지 전부 호출. 캐시버스팅(<code>t=</code>)으로 CDN 오프로드가 0이라 모든 요청이 origin에 직격되는 구조.</p>
+        <p><b style="color:var(--fg)">행동</b> — React Query(캐싱·중복 제거), IntersectionObserver lazy-load(노출 섹션만 통신), 스켈레톤(레이아웃 안정)을 적용. 섹션 단위로 점진 적용·실기기 검증, 문제 시 즉시 되돌릴 kill-switch로 안정 최우선. 부하 테스트용 유저 시나리오·엔드포인트 가중치 매트릭스도 직접 작성해 RPS 산정 근거를 마련.</p>
+        <p><b style="color:var(--fg)">결과</b> — 오퍼월 첫 진입 통신량 약 80% 감소(프론트 단독). 서버 최적화를 병행해 처리 한계가 2~3천 → 5천 RPS(DB 피크 50% 이하)로 늘어, 푸시·이벤트 오픈 직후 동시 진입 스파이크 대응 여력을 확보.</p>
+        <div class="stack">
+          <span>React</span><span>TypeScript</span><span>React Query</span>
+          <span class="ghost">IntersectionObserver</span><span class="ghost">스켈레톤</span><span class="ghost">부하 테스트 설계</span>
+        </div>
+      </div>
+
+      <!-- 앱 안정성 -->
+      <div class="card rv">
+        <div class="row">
+          <div>
+            <div class="kicker">마이비 · 앱 안정성</div>
+            <h3>Android 비정상 종료율 개선</h3>
+          </div>
+          <div class="scope">안정성 · 리텐션</div>
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="v"><b>74%↓</b></div><div class="k">비정상 종료율 2.40%→0.62%</div></div>
+          <div class="metric"><div class="v">동종 앱</div><div class="k">중앙값 수준 안착</div></div>
+        </div>
+        <p>입사 후 크래시 핫스팟을 추적·제거하고 버전을 안정화해, Play Console 사용자 인지 비정상 종료율(28일 이동평균)을 2.40%에서 0.62%로 약 74% 낮췄습니다. 현재 동종 앱 중앙값 수준에 안착했습니다.</p>
+        <div class="stack">
+          <span>Flutter</span><span>안정성</span>
+          <span class="ghost">크래시 분석</span><span class="ghost">Play Console</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
