@@ -117,8 +117,7 @@
 
   /* featured app card */
   .feature{background:linear-gradient(160deg,rgba(66,98,255,.10),var(--surface) 46%);border-color:rgba(124,166,255,.28)}
-  .applogo{width:54px;height:54px;border-radius:14px;background:linear-gradient(150deg,var(--brand),var(--brand-bold));
-    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;color:#fff;flex-shrink:0;box-shadow:0 6px 18px rgba(40,72,223,.4)}
+  .applogo{width:56px;height:56px;border-radius:14px;object-fit:cover;flex-shrink:0;box-shadow:0 6px 18px rgba(0,0,0,.35);background:#fff}
   .apphead{display:flex;gap:16px;align-items:center}
   .metrics{display:flex;flex-wrap:wrap;gap:10px;margin:4px 0 20px}
   .metric{background:var(--surface-2);border:1px solid var(--line-2);border-radius:12px;padding:12px 16px;min-width:120px}
@@ -130,6 +129,13 @@
     border:1px solid var(--line-2);border-radius:var(--r-pill);padding:10px 16px;color:var(--fg);transition:.2s}
   .store a:hover{border-color:var(--accent);color:var(--accent);background:rgba(66,98,255,.08)}
   .store svg{width:15px;height:15px;flex-shrink:0}
+
+  /* media (app icon + name) grid */
+  .media{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
+  .media-item{display:flex;align-items:center;gap:10px;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:8px 11px;min-width:0}
+  .media-item img{width:34px;height:34px;border-radius:9px;flex-shrink:0;background:#fff;object-fit:cover}
+  .media-item span{font-size:13px;font-weight:600;color:var(--fg);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  @media(max-width:600px){.media{grid-template-columns:repeat(2,1fr)}}
 
   /* career timeline */
   .timeline{margin-top:42px;position:relative;padding-left:30px}
@@ -293,7 +299,7 @@
       <!-- Featured: 마이비 -->
       <div class="card feature rv">
         <div class="apphead">
-          <div class="applogo">M</div>
+          <img class="applogo" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fc/f5/ce/fcf5ce77-efe7-551d-6117-1dc70114a0d3/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/256x256bb.jpg" alt="마이비 앱 아이콘" loading="lazy" />
           <div>
             <div class="kicker">리워드 슈퍼앱 · 대표 서비스</div>
             <h3>마이비 (MyB) — 퀴즈형 앱테크</h3>
@@ -349,10 +355,17 @@
           <div class="metric"><div class="v"><b>80%↓</b></div><div class="k">오퍼월 첫 진입 통신량</div></div>
           <div class="metric"><div class="v"><b>~2배</b></div><div class="k">처리량 3,000→5,000 RPS</div></div>
         </div>
-        <p style="margin:0 0 10px;color:var(--muted);font-size:13px;font-weight:600">서비스 매체</p>
-        <div class="chips" style="margin-bottom:20px">
-          <span>K뱅크</span><span>엠넷플러스</span><span>데일리샷</span><span>똑닥</span><span>트레져러</span>
-          <span>해피스크린</span><span>포토위젯</span><span>채티</span><span>레진코믹스</span>
+        <p style="margin:0 0 12px;color:var(--muted);font-size:13px;font-weight:600">서비스 매체</p>
+        <div class="media">
+          <div class="media-item"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/41/39/02/413902eb-5959-7125-df59-18aeabe9f180/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/128x128bb.jpg" alt="케이뱅크" loading="lazy" /><span>케이뱅크</span></div>
+          <div class="media-item"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e4/9b/cd/e49bcd2e-db9c-4b51-a6a5-5e115baea5d0/AppIcon-0-0-1x_U007ephone-0-1-sRGB-85-220.png/128x128bb.jpg" alt="엠넷플러스" loading="lazy" /><span>엠넷플러스</span></div>
+          <div class="media-item"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3b/a6/d5/3ba6d527-4e3d-1b02-7900-e4d0f2110dda/defaultAppIcon-0-0-1x_U007emarketing-0-11-0-sRGB-85-220.png/128x128bb.jpg" alt="데일리샷" loading="lazy" /><span>데일리샷</span></div>
+          <div class="media-item"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d9/e1/f5/d9e1f571-7d09-e6d7-ddc0-906e666fa616/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/128x128bb.jpg" alt="똑닥" loading="lazy" /><span>똑닥</span></div>
+          <div class="media-item"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ef/80/24/ef802452-0492-0a61-3f89-47e8423ee489/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/128x128bb.jpg" alt="트레져러" loading="lazy" /><span>트레져러</span></div>
+          <div class="media-item"><img src="https://play-lh.googleusercontent.com/R8nIUV0FXG_or0oOSip5v16a-0Co_kutep7FP4s7obLTddzYvC-57OryDtEjgm7JM7w=s128" alt="해피스크린" loading="lazy" /><span>해피스크린</span></div>
+          <div class="media-item"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/85/d0/14/85d01442-e335-8d5a-a498-1fc2ba7f1f48/AppIcon-0-0-1x_U007epad-0-1-0-0-sRGB-85-220.png/128x128bb.jpg" alt="포토위젯" loading="lazy" /><span>포토위젯</span></div>
+          <div class="media-item"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/13/43/30/13433054-7012-d844-9bb5-d07b9ecbe3c5/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/128x128bb.jpg" alt="채티" loading="lazy" /><span>채티</span></div>
+          <div class="media-item"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/71/75/22/717522a1-5d50-f8fa-e486-146fa76a7eef/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/128x128bb.jpg" alt="레진코믹스" loading="lazy" /><span>레진코믹스</span></div>
         </div>
         <div class="stack">
           <span>React</span><span>TypeScript</span>
