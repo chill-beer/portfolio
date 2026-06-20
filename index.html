@@ -405,10 +405,11 @@
         <div class="metrics">
           <div class="metric"><div class="v"><b>80%↓</b></div><div class="k">첫 진입 통신량 (29→6건)</div></div>
           <div class="metric"><div class="v"><b>~2배</b></div><div class="k">처리량 3,000→5,000 RPS</div></div>
-          <div class="metric"><div class="v">50%↓</div><div class="k">부하 시 DB 피크</div></div>
+          <div class="metric"><div class="v">100만</div><div class="k">최대 매체 앱 DAU (케이뱅크)</div></div>
+          <div class="metric"><div class="v">30만</div><div class="k">오퍼월 평균 DAU(상정)</div></div>
         </div>
-        <p><b style="color:var(--fg)">문제</b> — 캐싱 없는 useEffect 호출로 중복·무분별 통신, 첫 진입 시 화면 밖 섹션까지 전부 호출. 캐시버스팅(<code>t=</code>)으로 CDN 오프로드가 0이라 모든 요청이 origin에 직격되는 구조.</p>
-        <p><b style="color:var(--fg)">행동</b> — React Query(캐싱·중복 제거), IntersectionObserver lazy-load(노출 섹션만 통신), 스켈레톤(레이아웃 안정)을 적용. 섹션 단위로 점진 적용·실기기 검증, 문제 시 즉시 되돌릴 kill-switch로 안정 최우선. 부하 테스트용 유저 시나리오·엔드포인트 가중치 매트릭스도 직접 작성해 RPS 산정 근거를 마련.</p>
+        <p><b style="color:var(--fg)">배경</b> — 초기엔 빠른 릴리즈를 위해 기능 구현·정상 동작에 집중하느라 최적화는 적용하지 않은 상태로 출시했습니다(첫 적용 매체 앱 DAU 약 1만). 캐싱 없는 useEffect 호출로 중복·무분별 통신 + 화면 밖 섹션까지 전부 호출, 캐시버스팅(<code>t=</code>)으로 CDN 오프로드가 0이라 모든 요청이 origin에 직격. 이후 대형 매체 계약이 늘며 트래픽이 급증했습니다.</p>
+        <p><b style="color:var(--fg)">행동</b> — React Query(캐싱·중복 제거)·IntersectionObserver lazy-load(노출 섹션만 통신)·스켈레톤(레이아웃 안정)을 kill-switch 기반으로 섹션 단위 점진 적용·실기기 검증. <b style="color:var(--fg)">매체 규모 확장에 맞춰 단계적으로</b> — 똑닥(앱 DAU 약 10만)에서 1차 최적화, 이후 최대 고객 케이뱅크(1금융권·앱 DAU 약 100만·오퍼월 평균 DAU 약 30만 상정)를 대비해 추가 최적화. 부하 테스트용 유저 시나리오·엔드포인트 가중치 매트릭스도 직접 작성.</p>
         <p><b style="color:var(--fg)">결과</b> — 오퍼월 첫 진입 통신량 약 80% 감소(프론트 단독). 서버 최적화를 병행해 처리 한계가 2~3천 → 5천 RPS(DB 피크 50% 이하)로 늘어, 푸시·이벤트 오픈 직후 동시 진입 스파이크 대응 여력을 확보.</p>
         <div class="stack">
           <span>React</span><span>TypeScript</span><span>React Query</span>
